@@ -1,0 +1,103 @@
+ .ai-btn {
+     padding: 10px 10px;
+     text-decoration: none;
+     cursor: pointer;
+     font-size: 16px;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     /* 让父元素的宽度自适应子元素 */
+     width: max-content;
+ }
+
+ .ai-btn-default {
+     color: #ffffff;
+     background-color: #3498DB;
+     border: 1px solid #3498DB;
+ }
+
+ .ai-btn-default:hover {
+     filter: brightness(1.1);
+ }
+
+ .ai-btn-default:disabled {
+     cursor: not-allowed;
+     color: #bfcbd9;
+     background-color: #eef1f6;
+     border-color: #d1dbe5;
+ }
+
+ .ai-btn-default:disabled:hover {
+     filter: brightness(1)
+ }
+
+ .ai-btn-plain {
+     color: #3498DB;
+     background-color: transparent;
+     border: 1px solid #3498DB;
+ }
+
+ .ai-btn-plain:hover {
+     background-color: rgba(52, 152, 219, 0.1);
+     filter: brightness(1.2);
+ }
+
+ .ai-btn-plain:disabled {
+     cursor: not-allowed;
+     color: #bfcbd9;
+     border-color: #d1dbe5;
+ }
+
+ .ai-btn-plain:disabled:hover {
+     background-color: transparent;
+     filter: brightness(1)
+ }
+
+ .ai-btn-rectangle {
+     border-radius: 0;
+ }
+
+ .ai-btn-rounded {
+     border-radius: 40px;
+ }
+
+ .ai-btn-circle {
+     border-radius: 50%;
+ }
+
+ .ai-btn-square {
+     border-radius: 0;
+ }
+
+ .ai-btn-loading-default {
+     background: url(./loading-default.png) center center no-repeat;
+     background-size: contain;
+     width: 17px;
+     height: 16px;
+     transform: rotate(360deg);
+     animation: btnloading 2s linear infinite;
+ }
+
+ .ai-btn-loading-plain {
+     background: url(./loading-plain.png) center center no-repeat;
+     background-size: contain;
+     width: 16px;
+     height: 16px;
+     transform: rotate(360deg);
+     animation: btnloading 2s linear infinite;
+ }
+
+ @keyframes btnloading {
+     from {
+         transform: rotate(0deg);
+     }
+
+     to {
+         transform: rotate(360deg);
+     }
+
+ }
+
+ .ai-btn .icon-spacing-text {
+     width: 5px;
+ }
