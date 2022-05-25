@@ -1,0 +1,20 @@
+.aiyo-progress{
+    display: inline-block;
+}
+.aiyo-progress>.progress-bg {
+    display: inline-block;
+    width: 300px;
+    height: 10px;
+    background-color: #E5E7E9;
+    border-radius: 10px;
+}
+.aiyo-progress>span{
+    margin-left: 5px;
+}
+
+.aiyo-progress>.progress-bg>.progress-inner {
+    width: 0;
+    height: inherit;
+    border-radius: inherit;
+    background-color: #58D68D
+}
