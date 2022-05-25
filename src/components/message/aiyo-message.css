@@ -1,0 +1,24 @@
+.aiyo-message-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1050;
+    pointer-events: none;
+}
+
+.aiyo-message-container .aiyo-message {
+    pointer-events: none;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.aiyo-message-container .aiyo-message .message-content {
+    display: inline-flex;
+    background: white;
+    font-size: 14px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, .3));
+    border-radius: 2px;
+    padding: 5px 10px;
+}
