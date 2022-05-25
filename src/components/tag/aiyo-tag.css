@@ -1,0 +1,16 @@
+.aiyo-tag {
+    display: inline-flex;
+    border: 1px solid black;
+    font-size: 14px;
+    padding: 0px 5px;
+}
+
+.aiyo-tag>.close-btn{
+    border: 0;
+    color: inherit;
+    background-color: transparent;
+    padding: 0px 0px 0px 10px;
+}
+.aiyo-tag>.close-btn:hover{
+    cursor: pointer;
+}
