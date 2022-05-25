@@ -1,0 +1,169 @@
+.aiyo-popover {
+    position: relative;
+    display: inline-block;
+}
+
+.aiyo-popover>.popover-container {
+    visibility: hidden;
+    width: max-content;
+    padding: 5px 10px;
+    color: black;
+    background-color: white;
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, .4));
+    position: absolute;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.aiyo-popover .popover-container.location-TL {
+    bottom: calc(100% + 20px);
+    left: 0%;
+}
+
+.aiyo-popover .popover-container.location-Top {
+    bottom: calc(100% + 20px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.aiyo-popover .popover-container.location-TR {
+    bottom: calc(100% + 20px);
+    right: 0%;
+}
+
+.aiyo-popover .popover-container.location-BR {
+    top: calc(100% + 20px);
+    right: 0%;
+}
+
+.aiyo-popover .popover-container.location-Bottom {
+    top: calc(100% + 20px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.aiyo-popover .popover-container.location-BL {
+    top: calc(100% + 20px);
+    left: 0%;
+}
+
+.aiyo-popover .popover-container.location-RT {
+    top: 0%;
+    left: calc(100% + 20px);
+}
+
+.aiyo-popover .popover-container.location-Right {
+    top: 50%;
+    left: calc(100% + 20px);
+    transform: translateY(-50%);
+}
+
+.aiyo-popover .popover-container.location-RB {
+    bottom: 0%;
+    left: calc(100% + 20px);
+}
+
+.aiyo-popover .popover-container.location-LT {
+    top: 0%;
+    right: calc(100% + 20px);
+}
+
+.aiyo-popover .popover-container.location-Left {
+    top: 50%;
+    right: calc(100% + 20px);
+    transform: translateY(-50%);
+}
+
+.aiyo-popover .popover-container.location-LB {
+    bottom: 0%;
+    right: calc(100% + 20px);
+}
+
+
+.aiyo-popover .popover-container::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+}
+
+.aiyo-popover .popover-container.location-TL::after {
+    top: 100%;
+    left: 10%;
+    border-top-color: #ffffff;
+}
+
+.aiyo-popover .popover-container.location-Top::after {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top-color: #ffffff;
+}
+
+.aiyo-popover .popover-container.location-TR::after {
+    top: 100%;
+    right: 10%;
+    border-top-color: #ffffff;
+}
+
+.aiyo-popover .popover-container.location-BR::after {
+    bottom: 100%;
+    right: 10%;
+    border-bottom-color: #ffffff;
+}
+
+.aiyo-popover .popover-container.location-Bottom::after {
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-color: #ffffff;
+}
+
+.aiyo-popover .popover-container.location-BL::after {
+    bottom: 100%;
+    left: 10%;
+    border-bottom-color: #ffffff;
+}
+
+.aiyo-popover .popover-container.location-RT::after {
+    top: 10%;
+    left: -10px;
+    border-right-color: #ffffff;
+}
+
+.aiyo-popover .popover-container.location-Right::after {
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    border-right-color: #ffffff;
+}
+
+.aiyo-popover .popover-container.location-RB::after {
+    bottom: 10%;
+    left: -10px;
+    border-right-color: #ffffff;
+}
+
+.aiyo-popover .popover-container.location-LT::after {
+    top: 10%;
+    right: -10px;
+    border-left-color: #ffffff;
+}
+
+.aiyo-popover .popover-container.location-Left::after {
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    border-left-color: #ffffff;
+}
+
+.aiyo-popover .popover-container.location-LB::after {
+    bottom: 10%;
+    right: -10px;
+    border-left-color: #ffffff;
+}
+
+.aiyo-popover:hover .popover-container {
+    visibility: visible;
+}
