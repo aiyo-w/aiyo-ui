@@ -11,17 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-
-.test {
-  background-color: #48C9B0;
-  color: white;
-  border: 1px solid #0E6251;
-}
-
-.icon-smail {
-  background: url("./Hello.png") center center no-repeat;
-  width: 17px;
-  height: 16px;
-  background-size: cover;
-}
