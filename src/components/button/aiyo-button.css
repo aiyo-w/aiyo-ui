@@ -20,6 +20,10 @@
      filter: brightness(1.1);
  }
 
+ .ai-btn-default:active {
+     filter: brightness(1);
+ }
+
  .ai-btn-default:disabled {
      cursor: not-allowed;
      color: #bfcbd9;
@@ -38,14 +42,19 @@
  }
 
  .ai-btn-plain:hover {
-     background-color: rgba(52, 152, 219, 0.1);
+     background-color: rgba(52, 152, 219, 0.05);
      filter: brightness(1.2);
+ }
+
+ .ai-btn-plain:active {
+     box-shadow: 0 0 5px #8bc8f1;
  }
 
  .ai-btn-plain:disabled {
      cursor: not-allowed;
      color: #bfcbd9;
      border-color: #d1dbe5;
+     box-shadow: none;
  }
 
  .ai-btn-plain:disabled:hover {
