@@ -1,0 +1,81 @@
+.aiyo-input-text {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    border: 1px solid #D0D3D4;
+    height: 28px;
+    overflow: hidden;
+}
+
+
+.input-size-small {
+    height: 24px;
+}
+
+.input-size-large {
+    height: 32px;
+}
+
+.aiyo-input-text input {
+    border: 0;
+    outline: none;
+    height: 24px;
+    padding: 0 0 0 4px;
+}
+
+.aiyo-input-text input:disabled {
+    cursor: not-allowed;
+}
+
+.aiyo-input-text:dis
+
+.aiyo-input-text::placeholder {
+    color: #D0D3D4;
+}
+
+.aiyo-input-text:hover {
+    border: 1px solid #3498DB;
+}
+
+.aiyo-input-text:focus-within {
+    box-shadow: 1px 1px 3px #AED6F1;
+    outline: none;
+    border: 1px solid #3498DB;
+}
+
+
+.aiyo-input-icon {
+    line-height: 24px;
+    max-height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-icon-prefix {
+    margin-left: 4px;
+}
+
+.input-icon-suffix {
+    margin-right: 4px;
+}
+
+.aiyo-input-addon {
+    border: 1px solid #D0D3D4;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: #D0D3D4;
+    padding: 0 10px;
+}
+
+.aiyo-input-addon>* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+.aiyo-input-addon>*:focus {
+    outline: none;
+}
