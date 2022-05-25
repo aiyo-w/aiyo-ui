@@ -1,0 +1,14 @@
+.aiyo-carousel {
+    /* border: 1px solid black; */
+}
+
+.aiyo-carousel>.carousel-container {
+    /* float: left; */
+    white-space: nowrap;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.aiyo-carousel>.carousel-container>* {
+    display: inline-block;
+}
