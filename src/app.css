@@ -1,0 +1,37 @@
+.test {
+    display: inline-flex;
+  }
+  
+  .test-btn {
+    display: inline-flex;
+    border: none;
+    background-color: transparent;
+  }
+  .test-btn:hover{
+    background-color: #D0D3D4;
+  }
+  
+  .button-box {
+    margin: 10px 0;
+  }
+  
+  .button-box>* {
+    margin-left: 20px;
+  }
+  
+  .icon-smail {
+    background: url("./Hello.png") center center no-repeat;
+    width: 17px;
+    height: 16px;
+    background-size: cover;
+  }
+
+  .carousel-item{
+    width: 100%;
+    background-color: pink;
+    text-align: center;
+    line-height: 300px;
+  }
+  .carousel-item h3{
+    margin: 0;
+  }
