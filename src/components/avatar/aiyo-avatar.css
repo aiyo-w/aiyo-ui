@@ -1,0 +1,42 @@
+.aiyo-avatar {
+    background-color: #3498DB;
+    color: #ffffff;
+    display: inline-block;
+    text-align: center;
+    /*文字不换行*/
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.aiyo-avatar-square {
+    border-radius: 0;
+}
+
+.aiyo-avatar-circle {
+    border-radius: 50%;
+}
+
+.aiyo-avatar-small {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.aiyo-avatar-middle {
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+    line-height: 48px;
+}
+
+.aiyo-avatar-large {
+    width: 64px;
+    height: 64px;
+    font-size: 16px;
+    line-height: 64px;
+}
+
+.avatarimg {
+    height: 100%;
+}
