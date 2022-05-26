@@ -1,0 +1,29 @@
+.aiyo-collapse {
+    /* border: 1px solid #BDC3C7; */
+}
+
+.aiyo-collapse .collapse-title {
+    background-color: #F2F4F4;
+    padding: 10px 10px;
+    border: 1px solid #BDC3C7;
+
+}
+
+.aiyo-collapse .collapse-title .collapse-icon {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #626567 #626567 transparent transparent;
+    margin-right:10px ;
+    transform: rotate(45deg);
+    transition: all 0.2s;
+}
+
+.aiyo-collapse .collapse-context {
+    padding: 10px 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent #BDC3C7 #BDC3C7 #BDC3C7;
+}
