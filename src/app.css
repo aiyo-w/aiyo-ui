@@ -25,13 +25,3 @@
     height: 16px;
     background-size: cover;
   }
-
-  .carousel-item{
-    width: 100%;
-    background-color: pink;
-    text-align: center;
-    line-height: 300px;
-  }
-  .carousel-item h3{
-    margin: 0;
-  }

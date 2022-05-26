@@ -10,6 +10,8 @@ import { AiyoProgress } from "./components/progress/aiyo-progress";
 import { AiyoTag } from "./components/tag/aiyo-tag";
 import { AiyoList } from "./components/list/aiyo-list";
 import { AiyoPopover } from "./components/popover/aiyo-popover";
+import { AiyoCollapse } from "./components/collapse/aiyo-collapse";
+import useProtal from "./components/modal/modal";
 import api from './components/message/index';
 import avatar from './avatar.jpg';
 import hello from './Hello.png';
@@ -58,6 +60,17 @@ const App = () => {
             <span>my name is apao</span>
         </React.Fragment>
     );
+
+    const listData = [
+        'Racing car sprays burning fuel into crowd.',
+        'Japanese princess to wed commoner.',
+        'Australian walks 100km after outback crash.',
+        'Man charged over missing wedding girl.',
+        'Los Angeles battles huge wildfires.',
+    ];
+
+    const { Protal, handleClose, handleShow, isShow } = useProtal();
+
     return (
         <React.Fragment>
             <h2>Button:</h2>
@@ -153,19 +166,11 @@ const App = () => {
 
             <h2>Carousel:</h2>
             <div className="button-box">
-                <AiyoCarousel width="400px" height="300px">
-                    <div className="carousel-item">
-                        <h3>1</h3>
-                    </div>
-                    <div className="carousel-item">
-                        <h3>2</h3>
-                    </div>
-                    <div className="carousel-item">
-                        <h3>3</h3>
-                    </div>
-                    <div className="carousel-item">
-                        <h3>4</h3>
-                    </div>
+                <AiyoCarousel height="300px" width="500px" autoplay={true}>
+                    <div style={{ backgroundColor: '#D7BDE2', lineHeight: '300px', textAlign: 'center', fontSize: '32px' }}>1</div>
+                    <div style={{ backgroundColor: '#A3E4D7', lineHeight: '300px', textAlign: 'center', fontSize: '32px' }}>2</div>
+                    <div style={{ backgroundColor: '#F9E79F', lineHeight: '300px', textAlign: 'center', fontSize: '32px' }}>3</div>
+                    <div style={{ backgroundColor: '#AED6F1', lineHeight: '300px', textAlign: 'center', fontSize: '32px' }}>4</div>
                 </AiyoCarousel>
             </div>
 
@@ -186,7 +191,22 @@ const App = () => {
 
             <h2>List:</h2>
             <div className='button-box'>
-                <AiyoList />
+                <div style={{ width: '400px', display: 'inline-block' }}>
+                    <AiyoList dataSource={listData} renderItem={item => <span>{item}</span>} />
+                </div>
+                <div style={{ width: '400px', display: 'inline-block' }}>
+                    <AiyoList
+                        itemTypeStyle='circle'
+                        header={<div>Header</div>}
+                        footer={<div>footer</div>}
+                        dataSource={listData}
+                        renderItem={item => <span>{item}</span>} />
+                </div>
+            </div>
+            <div className='button-box'>
+                <div style={{ width: '600px', display: 'inline-block' }}>
+                    <AiyoList itemTypeStyle={<div>[ITEM]</div>} dataSource={listData} renderItem={item => <span>{item}</span>} />
+                </div>
             </div>
 
             <h2>Popover:</h2>
@@ -234,6 +254,24 @@ const App = () => {
             <h2>Message:</h2>
             <div className='button-box'>
                 <AiyoButton iconClass='icon-smail' className='test' onClick={() => { api.info('提示信息') }}>apao</AiyoButton>
+            </div>
+
+            <h2>Collapse:</h2>
+            <div className='button-box' style={{ width: '800px' }}>
+                <AiyoCollapse header="This is a collapse">
+                    <p>A dog is a type of domesticated animal</p>
+                    <p> Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
+                </AiyoCollapse>
+            </div>
+
+            <h2>Modal:</h2>
+            <div className='button-box' style={{ width: '800px' }}>
+                <div>状态：{JSON.stringify(isShow)}</div>
+                <AiyoButton onClick={handleShow}>click</AiyoButton>
+                <Protal>
+                    <div>这是一个简单的弹框</div>
+                    <button onClick={handleClose}>关闭</button>
+                </Protal>
             </div>
         </React.Fragment>
     );
