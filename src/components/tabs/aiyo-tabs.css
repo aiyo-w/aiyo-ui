@@ -1,0 +1,50 @@
+.aiyo-tabs .tabs-bar {
+    border-bottom: 1px solid #D7DBDD;
+    margin-bottom: 10px;
+}
+
+.aiyo-tabs .tabs-bar .tab-nav-container {
+    display: flex;
+    margin-bottom: -1px;
+}
+
+.aiyo-tabs .tabs-bar .tab-nav-container .tab-nav {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.aiyo-tabs .tabs-bar .tab-nav-container .tab-nav:hover,
+.aiyo-tabs .tabs-bar .tab-nav-container .tab-nav.is-active {
+    color: #5DADE2;
+}
+
+.aiyo-tabs .tabs-bar .tab-nav-container .tab-nav.is-active {
+    font-weight: 700;
+}
+
+.aiyo-tabs .tabs-bar .tab-nav-container .tab-nav.is-disabled {
+    color: gray;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.aiyo-tabs .tabs-content .tab-item {
+    display: none;
+}
+
+.aiyo-tabs .tabs-content .tab-item.is-active {
+    display: block;
+}
+
+.aiyo-tabs.tabs-line .tabs-bar .tab-nav-container .tab-nav.is-active {
+    border-bottom: 2px solid #5DADE2;
+}
+
+.aiyo-tabs.tabs-card .tabs-bar .tab-nav-container .tab-nav {
+    border-radius: 2px 2px 0 0;
+}
+
+.aiyo-tabs.tabs-card .tabs-bar .tab-nav-container .tab-nav.is-active {
+    border: 1px solid #D7DBDD;
+    border-bottom: 2px solid white;
+}
