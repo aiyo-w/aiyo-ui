@@ -11,6 +11,7 @@ import { AiyoTag } from "./components/tag/aiyo-tag";
 import { AiyoList } from "./components/list/aiyo-list";
 import { AiyoPopover } from "./components/popover/aiyo-popover";
 import { AiyoCollapse } from "./components/collapse/aiyo-collapse";
+import { AiyoTabs, TabItem } from "./components/tabs/aiyo-tabs";
 import useProtal from "./components/modal/modal";
 import api from './components/message/index';
 import avatar from './avatar.jpg';
@@ -272,6 +273,15 @@ const App = () => {
                     <div>这是一个简单的弹框</div>
                     <button onClick={handleClose}>关闭</button>
                 </Protal>
+            </div>
+
+            <h2>Tabs:</h2>
+            <div className='button-box'>
+                <AiyoTabs defaultIndex="1" type="card">
+                    <TabItem tab="tab 1">选项卡1</TabItem>
+                    <TabItem tab="tab 2">选项卡2</TabItem>
+                    <TabItem tab="tab 3">选项卡3</TabItem>
+                </AiyoTabs>
             </div>
         </React.Fragment>
     );
