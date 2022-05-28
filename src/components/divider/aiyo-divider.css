@@ -1,0 +1,38 @@
+.aiyo-divider {
+    position: relative;
+}
+
+.aiyo-divider .text {
+    font-weight: 600;
+    position: relative;
+    z-index: 99;
+}
+
+.aiyo-divider .text span {
+    background-color: white;
+    padding: 0 20px;
+}
+
+.aiyo-divider .text.left {
+    margin-left: 40px;
+}
+
+.aiyo-divider .text.right {
+    margin-right: 40px;
+    text-align: right;
+}
+
+.aiyo-divider .text.center {
+    text-align: center;
+}
+
+.aiyo-divider .line {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #B3B6B7;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: -webkit-fill-available;
+}
