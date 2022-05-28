@@ -12,6 +12,9 @@ import { AiyoList } from "./components/list/aiyo-list";
 import { AiyoPopover } from "./components/popover/aiyo-popover";
 import { AiyoCollapse } from "./components/collapse/aiyo-collapse";
 import { AiyoTabs, TabItem } from "./components/tabs/aiyo-tabs";
+import { AiyoSelect, Option } from "./components/select/aiyo-select";
+import { AiyoDivider } from "./components/divider/aiyo-divider";
+import { AiyoTable } from "./components/table/aiyo-table";
 import useProtal from "./components/modal/modal";
 import api from './components/message/index';
 import avatar from './avatar.jpg';
@@ -70,7 +73,42 @@ const App = () => {
         'Los Angeles battles huge wildfires.',
     ];
 
+    const selectList = [
+        'Racing',
+        'Japanese',
+        'Australian',
+        'Man',
+        'Los Angeles',
+    ];
+
     const { Protal, handleClose, handleShow, isShow } = useProtal();
+
+    const tableDataSource = [
+        {
+            name: '胡彦斌',
+            age: 32,
+            address: '西湖区湖底公园1号',
+        },
+        {
+            name: '胡彦祖',
+            age: 42,
+            address: '西湖区湖底公园1号',
+        }, {
+            name: '胡彦祖',
+            age: 42,
+            address: '西湖区湖底公园1号',
+        }, {
+            name: '胡彦祖',
+            age: 42,
+            address: '西湖区湖底公园1号',
+        },
+    ];
+
+    const tableColumns = [
+        '姓名',
+        '年龄',
+        '地址',
+    ];
 
     return (
         <React.Fragment>
@@ -282,6 +320,31 @@ const App = () => {
                     <TabItem tab="tab 2">选项卡2</TabItem>
                     <TabItem tab="tab 3">选项卡3</TabItem>
                 </AiyoTabs>
+            </div>
+
+            <h2>Select:</h2>
+            <div className='button-box'>
+                <AiyoSelect
+                    placeholder="请选择..."
+                    dataSource={selectList}>
+                </AiyoSelect>
+            </div>
+
+            <h2>Divider:</h2>
+            <div className='button-box'>
+                <AiyoDivider orientation="left">Left Text</AiyoDivider>
+                <p>发布上的认同和诋毁覅尔松菊阿萨按配镜安排考试的活佛评价哦九年级</p>
+                <AiyoDivider orientation="center">Center Text</AiyoDivider>
+                <p>发布上的认同和诋毁覅尔松菊阿萨按配镜安排考试的活佛评价哦九年级</p>
+                <AiyoDivider orientation="right">Right Text</AiyoDivider>
+
+            </div>
+
+            <h2>Table:</h2>
+            <div className='button-box'>
+                <div style={{ width: '600px', padding: '20px 20px', border: '1px solid' }}>
+                    <AiyoTable dataSource={tableDataSource} colunms={tableColumns} />
+                </div>
             </div>
         </React.Fragment>
     );
