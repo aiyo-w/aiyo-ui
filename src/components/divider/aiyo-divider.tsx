@@ -10,7 +10,7 @@ export const AiyoDivider = (props: PropsWithChildren<Props>) => {
     return (
         <div className="aiyo-divider">
             <div className={`text ${props.orientation ? props.orientation : 'left'}`}>
-                <span>{props.children}</span>
+                {typeof props.children === 'string' ? <span>{props.children}</span> : props.children}
             </div>
             <div className="line"></div>
         </div>

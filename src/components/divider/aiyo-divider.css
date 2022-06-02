@@ -1,5 +1,6 @@
 .aiyo-divider {
     position: relative;
+    z-index: -1;
 }
 
 .aiyo-divider .text {
@@ -9,6 +10,11 @@
 }
 
 .aiyo-divider .text span {
+    font-size: 14px;
+    font-weight: 100;
+}
+.aiyo-divider .text>*{
+    display: inline-block;
     background-color: white;
     padding: 0 20px;
 }
@@ -27,9 +33,9 @@
 }
 
 .aiyo-divider .line {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #B3B6B7;
+    height: 1px;
+    background: #B3B6B7;
+    border: none;
     position: absolute;
     top: 50%;
     left: 0;
