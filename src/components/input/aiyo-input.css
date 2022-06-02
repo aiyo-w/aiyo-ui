@@ -27,9 +27,7 @@
     cursor: not-allowed;
 }
 
-.aiyo-input-text:dis
-
-.aiyo-input-text::placeholder {
+.aiyo-input-text input::placeholder {
     color: #D0D3D4;
 }
 
