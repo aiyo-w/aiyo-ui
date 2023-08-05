@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, ReactNode, useState } from "react";
+import React, { ChangeEvent, PropsWithChildren, ReactNode, useState } from "react";
 import './aiyo-select.css';
 
 interface OptionProps {
@@ -18,6 +18,8 @@ export const Option = (props: PropsWithChildren<OptionProps>) => {
 interface SelectProps {
     placeholder?: string;
     dataSource?: any[];
+
+    onChange?: (value: string) => void;
 }
 export const AiyoSelect = (props: PropsWithChildren<SelectProps>) => {
     const [isCollapse, setIsCollapse] = useState(false);
@@ -26,6 +28,7 @@ export const AiyoSelect = (props: PropsWithChildren<SelectProps>) => {
     const doClick = (value: string) => {
         setSelectedValue(value);
         setIsCollapse(!isCollapse);
+        props.onChange?.(value);
     }
 
     const renderList = () => {
@@ -41,6 +44,11 @@ export const AiyoSelect = (props: PropsWithChildren<SelectProps>) => {
         );
     }
 
+    const doOnchange = (e: ChangeEvent<HTMLInputElement>) => {
+        const value = e.target.value;
+        props.onChange?.(value);
+    }
+
     return (
         <div className="aiyo-select">
             <div
@@ -51,6 +59,7 @@ export const AiyoSelect = (props: PropsWithChildren<SelectProps>) => {
                     type="text"
                     placeholder={props.placeholder}
                     defaultValue={selectedValue}
+                    onChange={doOnchange}
                     readOnly />
             </div>
             <div className={`dropdown-list ${isCollapse ? 'show' : ''}`}>
