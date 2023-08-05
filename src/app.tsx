@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { AiyoButton } from './components/button/aiyo-button';
 import { AiyoAvatar } from './components/avatar/aiyo-avatar';
 import { AiyoInput } from './components/input/aiyo-input';
@@ -15,6 +15,7 @@ import avatar from './avatar.jpg';
 import hello from './Hello.png';
 
 import './app.css';
+import { Input } from "antd";
 
 const App = () => {
     const [checkedValue, setCheckedValue] = useState(false);
@@ -58,8 +59,20 @@ const App = () => {
             <span>my name is apao</span>
         </React.Fragment>
     );
+
+    const handleGetValue: React.KeyboardEventHandler<HTMLInputElement> = (e) => {
+        console.log(e.currentTarget.value);
+    }
+
     return (
         <React.Fragment>
+            <h2>antd input</h2>
+            <div className="input-box">
+                <Input placeholder="Basic usage" />
+                <Input addonBefore="http://" addonAfter=".com" defaultValue="mysite" onPressEnter={handleGetValue} />
+                {/* <button type="button" onClick={handleGetValue}>点击</button> */}
+            </div>
+
             <h2>Button:</h2>
             <div className='button-box'>
                 <AiyoButton iconClass='icon-smail' className='test' onClick={doBtnClick}>apao</AiyoButton>
@@ -116,24 +129,25 @@ const App = () => {
 
             <h2>Input:</h2>
             <div className='button-box'>
-                <AiyoInput placceholder='hello' size='small' maxLength={2} disabled />
+                <AiyoInput placceholder='hello' size='small' defaultValue="" />
+                <AiyoInput placceholder='hello' size='small' defaultValue="" maxLength={2} disabled />
                 <AiyoInput placceholder='hello' defaultValue='11' disabled={true} />
                 <AiyoInput placceholder='hello' size='large' disabled={false} defaultValue="1" onChange={doInputValueChange} />
             </div>
 
             <div className='button-box'>
-                <AiyoInput placceholder='hello' disabled={true} prefix={<img src={hello} alt='11' height={18} />} />
-                <AiyoInput placceholder='hello' disabled={true} suffix={<img src={hello} alt='11' height={18} />} />
-                <AiyoInput placceholder='hello' disabled={true} prefix={<img src={hello} alt='11' height={18} />} suffix={<img src={hello} alt='11' height={18} />} />
+                <AiyoInput placceholder='hello' disabled={true} defaultValue="" prefix={<img src={hello} alt='11' height={18} />} />
+                <AiyoInput placceholder='hello' disabled={true} defaultValue="" suffix={<img src={hello} alt='11' height={18} />} />
+                <AiyoInput placceholder='hello' disabled={true} defaultValue="" prefix={<img src={hello} alt='11' height={18} />} suffix={<img src={hello} alt='11' height={18} />} />
                 <AiyoInput placceholder='hello' disabled suffix=".com" />
             </div>
 
             <div className='button-box'>
-                <AiyoInput addonBefore={<span>hello</span>} />
-                <AiyoInput addonAfter={<div>after</div>} />
-                <AiyoInput addonAfter={<p>11</p>} />
-                <AiyoInput addonAfter={<a href='#'>111</a>} />
-                <AiyoInput addonAfter={<select title='a' value={1}><option>11</option></select>} />
+                <AiyoInput defaultValue="" addonBefore={<span>hello</span>} />
+                <AiyoInput defaultValue="" addonAfter={<div>after</div>} />
+                <AiyoInput defaultValue="" addonAfter={<p>11</p>} />
+                <AiyoInput defaultValue="" addonAfter={<a href='#'>111</a>} />
+                {/* <AiyoInput defaultValue="" addonAfter={<select title='a' value={1}><option>11</option></select>} /> */}
             </div>
 
             <h2>Checkbox:</h2>
