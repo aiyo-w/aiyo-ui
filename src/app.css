@@ -1,27 +1,178 @@
-.test {
-    display: inline-flex;
-  }
-  
-  .test-btn {
-    display: inline-flex;
-    border: none;
-    background-color: transparent;
-  }
-  .test-btn:hover{
-    background-color: #D0D3D4;
-  }
-  
-  .button-box {
-    margin: 10px 0;
-  }
-  
-  .button-box>* {
-    margin-left: 20px;
-  }
-  
-  .icon-smail {
-    background: url("./Hello.png") center center no-repeat;
-    width: 17px;
-    height: 16px;
-    background-size: cover;
-  }
+.container {
+  display: flex;
+}
+
+.container>.left-menu {
+  height: 100vh;
+  background-color: white;
+  border-right: 1px solid #D0D3D4;
+  position: fixed;
+  left: 0;
+  top: 30px;
+  overflow: auto;
+}
+
+.container>.left-menu>ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container>.left-menu>ul li {
+  list-style: none;
+}
+
+.container>.left-menu>ul li a {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  padding: 15px 30px;
+  width: 220px;
+}
+
+.container>.left-menu>ul li:hover a {
+  background-color: #EBF5FB;
+  color: #3498DB;
+  border-right: 3px solid #3498DB;
+
+}
+
+.container>.left-menu .active a {
+  background-color: #EBF5FB;
+  color: #3498DB;
+  border-right: 3px solid #3498DB;
+}
+
+.container>.goto-github {
+  display: inline-block;
+  position: fixed;
+  right: 30px;
+  bottom: 60px;
+}
+
+.container>.goto-github a {
+  display: inline-block;
+  padding: 32px
+}
+
+.container>.goto-github a::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: url(../src/github.png) center center no-repeat;
+  background-size: cover;
+  background-color: white;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3))
+}
+
+.container>.content {
+  width: 100%;
+  margin: 30px 80px 0 350px;
+}
+
+.container>.content .demo {
+  border: 1px solid #D0D3D4;
+  display: inline-block;
+  padding: 20px;
+  vertical-align: top;
+  min-width: 500px;
+  margin-right: 100px;
+  margin-bottom: 20px;
+}
+
+.demo>*,
+.demo>.component-box>* {
+  margin: 20px 20px;
+  font-size: 14px;
+}
+
+.demo>.component-box {
+  text-align: center;
+}
+
+.demo>.component-box.popover {
+  width: 500px;
+  height: 300px;
+  position: relative;
+}
+
+.demo>.component-box.popover>* {
+  margin: 0;
+}
+
+.demo>.component-box.popover>.top>*,
+.left>*,
+.right>*,
+.bottom>* {
+  margin: 10px 10px;
+}
+
+.demo>.component-box.popover>.top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.demo>.component-box.popover>.left {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.demo>.component-box.popover>.right {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.demo>.component-box.popover>.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.demo>.component-box.collapse>* {
+  margin: 0;
+  text-align: initial;
+}
+
+
+.test-btn {
+  display: inline-flex;
+  border: none;
+  background-color: transparent;
+}
+
+.test-btn:hover {
+  background-color: #D0D3D4;
+}
+
+.button-box {
+  margin: 10px 0;
+}
+
+.button-box>* {
+  margin-left: 20px;
+}
+
+.icon-smail {
+  background: url("./Hello.png") center center no-repeat;
+  width: 17px;
+  height: 16px;
+  background-size: cover;
+}
