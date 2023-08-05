@@ -1,0 +1,44 @@
+.aiyo-divider {
+    position: relative;
+    z-index: -1;
+}
+
+.aiyo-divider .text {
+    font-weight: 600;
+    position: relative;
+    z-index: 99;
+}
+
+.aiyo-divider .text span {
+    font-size: 14px;
+    font-weight: 100;
+}
+.aiyo-divider .text>*{
+    display: inline-block;
+    background-color: white;
+    padding: 0 20px;
+}
+
+.aiyo-divider .text.left {
+    margin-left: 40px;
+}
+
+.aiyo-divider .text.right {
+    margin-right: 40px;
+    text-align: right;
+}
+
+.aiyo-divider .text.center {
+    text-align: center;
+}
+
+.aiyo-divider .line {
+    height: 1px;
+    background: #B3B6B7;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: -webkit-fill-available;
+}

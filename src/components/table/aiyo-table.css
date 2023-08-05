@@ -1,0 +1,30 @@
+.aiyo-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.aiyo-table thead {
+    background-color: #CACFD2;
+    border-spacing: 0px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.aiyo-table thead th {
+    padding: 10px 20px;
+    border:1px solid;
+    border-color: #CACFD2 white #CACFD2  #CACFD2 ;
+}
+.aiyo-table thead th:last-child{
+    border-color: #CACFD2 ;
+}
+
+.aiyo-table tbody {
+    font-size: 14px;
+    text-align: left;
+}
+
+.aiyo-table tbody td {
+    padding: 10px 20px;
+    border: 1px solid #CACFD2;
+}

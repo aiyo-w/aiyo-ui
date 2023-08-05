@@ -6,21 +6,30 @@ interface Props {
     id?: string | undefined;
     name?: string | undefined;
     value: boolean;
+    disabled?: boolean;
 
     onChange?: ChangeEventHandler<HTMLInputElement> | undefined;
 }
 
 export const AiyoCheckbox = (props: Props) => {
-/* 
-    const doClick = (e: React.MouseEvent) => {
-        
-    }
- */
-    return (<input
-        type="checkbox"
-        name={props.name}
-        id={props.id}
-        checked={props.value}
-        onChange={props.onChange}
-    />);
+    return (
+        <div className="aiyo-checkbox">
+            <input
+                className="checkbox-input"
+                type="checkbox"
+                name={props.name}
+                id={props.id}
+                checked={props.value}
+                onChange={props.onChange}
+                disabled={props.disabled}
+            />
+            <label htmlFor={props.id} className={props.value ? 'active' : 'false'}>
+                {/* {props.value ? <span></span> : ''} */}
+            </label>
+        </div>
+    );
+}
+
+AiyoCheckbox.defaultProps = {
+    disabled: false
 }

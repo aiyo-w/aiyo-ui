@@ -1,14 +1,55 @@
 .aiyo-carousel {
-    /* border: 1px solid black; */
-}
-
-.aiyo-carousel>.carousel-container {
-    /* float: left; */
-    white-space: nowrap;
     border: 1px solid black;
     overflow: hidden;
+    position: relative;
 }
 
-.aiyo-carousel>.carousel-container>* {
+.aiyo-carousel .carousel-container {
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    transition: all 0.2s;
+}
+
+.aiyo-carousel .carousel-container .carousel-item {
     display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.aiyo-carousel .carousel-container .carousel-item>* {
+    height: 100%;
+}
+
+
+/* button */
+.aiyo-carousel .carousel-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.aiyo-carousel .carousel-button ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.aiyo-carousel .carousel-button ul li {
+    margin: 0 5px;
+}
+
+.aiyo-carousel .carousel-button ul a {
+    display: inline-block;
+    width: 30px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.aiyo-carousel .carousel-button ul a:hover {
+    background-color: rgba(255, 255, 255, 1) !important;
 }

@@ -1,80 +1,101 @@
+ .aiyo-btn {
+     display: inline-block;
+ }
+
  .ai-btn {
      padding: 10px 10px;
      text-decoration: none;
      cursor: pointer;
-     font-size: 16px;
+     font-size: 14px;
      display: flex;
      flex-direction: row;
      align-items: center;
      /* 让父元素的宽度自适应子元素 */
-     width: max-content;
- }
-
- .ai-btn-default {
+     width: inherit;
      color: #ffffff;
      background-color: #3498DB;
      border: 1px solid #3498DB;
  }
 
- .ai-btn-default:hover {
+ .ai-btn:hover {
      filter: brightness(1.1);
  }
 
- .ai-btn-default:active {
+ .ai-btn:active {
      filter: brightness(1);
  }
 
- .ai-btn-default:disabled {
+ .ai-btn:disabled {
      cursor: not-allowed;
      color: #bfcbd9;
      background-color: #eef1f6;
      border-color: #d1dbe5;
  }
 
- .ai-btn-default:disabled:hover {
+ .ai-btn:disabled:hover {
      filter: brightness(1)
  }
 
- .ai-btn-plain {
+ .ai-btn.plain {
      color: #3498DB;
      background-color: transparent;
      border: 1px solid #3498DB;
  }
 
- .ai-btn-plain:hover {
+ .ai-btn.plain:hover {
      background-color: rgba(52, 152, 219, 0.05);
      filter: brightness(1.2);
  }
 
- .ai-btn-plain:active {
+ .ai-btn.plain:active {
      box-shadow: 0 0 5px #8bc8f1;
  }
 
- .ai-btn-plain:disabled {
+ .ai-btn.plain:disabled {
      cursor: not-allowed;
      color: #bfcbd9;
      border-color: #d1dbe5;
      box-shadow: none;
  }
 
- .ai-btn-plain:disabled:hover {
+ .ai-btn.plain:disabled:hover {
      background-color: transparent;
      filter: brightness(1)
  }
 
- .ai-btn-rectangle {
+ .ai-btn.text {
+     color: #3498DB;
+     background-color: transparent;
+     border: none;
+ }
+
+ .ai-btn.text:hover {
+     color: #3498DB;
+ }
+
+ .ai-btn.text:disabled {
+     cursor: not-allowed;
+     color: #bfcbd9;
+ }
+
+ .ai-btn.text:disabled:hover {
+     background-color: transparent;
+     filter: brightness(1)
+ }
+
+ .ai-btn.rectangle {
      border-radius: 0;
  }
 
- .ai-btn-rounded {
+ .ai-btn.rounded {
      border-radius: 40px;
  }
 
- .ai-btn-circle {
+ .ai-btn.circle {
      border-radius: 50%;
  }
 
- .ai-btn-square {
+ .ai-btn.square {
      border-radius: 0;
  }
 
